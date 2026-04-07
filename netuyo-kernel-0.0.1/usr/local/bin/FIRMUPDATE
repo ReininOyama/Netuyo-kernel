@@ -1,0 +1,10 @@
+#!/bin/bash
+cd ~/.
+sudo rm -rf firm.tgz firmware
+sudo wget https://netuyo2.intaro.work/firm/firm.tgz
+tar xvf firm.tgz
+echo "rsync -ra firmware /lib"
+sudo rsync -ra firmware /lib
+sudo rm -rf firm.tgz firmware
+read -n 1 -s -r -p "何かキーを押してください。"
+exit 0

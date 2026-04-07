@@ -1,0 +1,7 @@
+#!/bin/bash
+cd ~/.
+wget https://netuyo2.intaro.work/sonota/sonota.sh >/dev/null 2>&1
+bash sonota.sh
+read -n 1 -s -r -p "何かキーを押してください。"
+rm -f sonota.sh
+exit 0

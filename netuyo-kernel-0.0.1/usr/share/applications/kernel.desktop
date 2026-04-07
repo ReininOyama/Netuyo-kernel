@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Categories=System;
+Exec=/usr/local/bin/KERNEL
+Icon=/usr/share/icons/netuyo/kaku.png
+Name=最新カーネル設定

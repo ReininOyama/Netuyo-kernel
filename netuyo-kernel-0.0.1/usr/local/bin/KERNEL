@@ -1,0 +1,34 @@
+#!/usr/bin/wish
+#
+option add *font {FixedSys 14}
+wm title . "最新カーネル設定"
+wm geometry . "380x200+150+120"
+button .b1 -text "最新カーネルをインストールする" -command k_install
+button .b2 -text "最新カーネルをアンインストールする" -command k_uninstall
+button .b3 -text "閉じる" -command "exit"
+pack .b1 .b2 .b3 -pady 11
+
+proc k_install {} {
+	toplevel .t0
+	wm title .t0 "最新カーネルインストール"
+	wm geometry .t0 "340x100+180+160"
+	message .t0.m1 -text "インストールを実行しますか？" -width 320
+	frame .t0.f0
+	button .t0.f0.b1 -text "実行" -command "exec KERNELUPDATE"
+	message .t0.f0.m11 -text " "
+	button .t0.f0.b2 -text "閉じる" -command "destroy .t0"
+	pack .t0.f0.b1 .t0.f0.m11 .t0.f0.b2 -side left
+	pack .t0.m1 .t0.f0
+}
+proc k_uninstall {} {
+	toplevel .t1
+	wm title .t1 "最新カーネルアンインストール"
+	wm geometry .t1 "340x100+180+160"
+	message .t1.m3 -text "アンインストールを実行しますか？" -width 320
+	frame .t1.f1
+	button .t1.f1.b1 -text "実行" -command "exec KERNELDELETE"
+	message .t1.f1.m11 -text " "
+	button .t1.f1.b2 -text "閉じる" -command "destroy .t1"
+	pack .t1.f1.b1 .t1.f1.m11 .t1.f1.b2 -side left
+	pack .t1.m3 .t1.f1
+}

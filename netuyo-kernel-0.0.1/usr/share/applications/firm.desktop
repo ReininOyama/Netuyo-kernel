@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Categories=System;
+Exec=/usr/bin/qterminal -e "bash -c /usr/local/bin/FIRMUPDATE"
+Icon=/usr/share/icons/netuyo/firm.png
+Name=Firmwareアップデート

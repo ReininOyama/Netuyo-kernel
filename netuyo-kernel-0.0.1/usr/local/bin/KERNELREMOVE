@@ -1,0 +1,17 @@
+#!/bin/bash
+sudo dpkg -l|grep linux-image|grep proto|while read line
+do
+  deldel=`echo -n $line | cut -d ' ' -f 2`
+  echo $deldel
+  sudo dpkg --purge $deldel
+done
+dpkg -l|grep linux-headers|grep proto|while read line
+do
+  deldel=`echo -n $line | cut -d ' ' -f 2`
+  echo $deldel
+  sudo dpkg --purge $deldel
+done
+sudo apt-mark unhold linux-firmware
+echo "変更は、再起動後に反映されます。"
+read -n 1 -s -r -p "何かキーを押してください。"
+exit 0

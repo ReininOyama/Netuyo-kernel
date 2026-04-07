@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Categories=System;
+Exec=/usr/bin/qterminal -e "bash -c /usr/local/bin/SONOTA"
+Icon=/usr/share/icons/netuyo/sonota.png
+Name=その他の修正

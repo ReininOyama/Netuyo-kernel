@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo rm -rf netuyo2.intaro.work
+wget -r -A *proto* -R *index* https://netuyo2.intaro.work/kernel/
+sudo dpkg -i netuyo2.intaro.work/kernel/*
+sudo rm -rf netuyo2.intaro.work
+sudo apt-mark hold linux-firmware
+echo "変更は、再起動後に反映されます。"
+read -n 1 -s -r -p "何かキーを押してください。"
+exit 0

@@ -4,7 +4,7 @@ Section: main
 Maintainer: Reinin Oyama
 Architecture: all
 Version: 0.0.1
-Depends: qterminal, qterminal-l10n, bash, wget, rsync
+Depends: git, qterminal, qterminal-l10n, bash, wget, rsync
 Conflicts:
 Provides:
 Description: Netuyo kernel updater
